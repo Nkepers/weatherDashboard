@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <!-- Header for the screen -->
+    <section>
+        <h1 class="background-info">Weather Dashbord</h1>
+    </section>
+
+    <!-- This is where you go to search for a city -->
+    <section id="currentSearch">
+        <h2>Search for a City:</h2>
+        <input type="text" id="searchCity" name="Search">
+        <input type="button" value="Search">
+    </section>
+
+    <!-- List of cities that have been searched for -->
+    <section id="priorSearch">
+        <h2>Previous Searches:</h2>
+    </section>
+
+    <!-- Displays current weather of city searched -->
+    <section id="weatherDisplay">
+        <h2>Showing Weather For:<span></span></h2>
+    </section>
+
+    <!-- The 5 day forecast will display here -->
+    <section id="futureForecast">
+        <h2>5-Day Forecast:</h2>
+        
+        <div id="date1"></div>
+        <div id="date2"></div>
+        <div id="date3"></div>
+        <div id="date4"></div>
+        <div id="date5"></div>
+
+        <p id="day1"></p>
+        <p id="day2"></p>
+        <p id="day3"></p>
+        <p id="day4"></p>
+        <p id="day5"></p>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
