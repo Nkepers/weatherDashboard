@@ -11,50 +11,74 @@
     <title>Weather</title>
 </head>
 
-<body>
-    <!-- Header for the screen -->
-    <section>
-        <h1 class="background-info">Weather Dashbord</h1>
-    </section>
+<section class="container-fluid d-flex justify-content-between">
+    <div class="col-sm-3 ">
+      <div class="card">
+        <article class="card-body">
+          <h2 class="card-title text-center"> Search for a City</h2>
+          <form class="text-center">
+            <label class="form-label" for="city">Enter City Name</label>
+            <input name="search" id="search" type="text" autofocus="true" class="search-input col pt-1 text-center mb-2"
+              placeholder="search" />
+          </form>
+          <button id="searchBtn" class="btn d-grid gap-2 col searchBtn rounded mb-2"> Search </button>
+        </article>
+      </div>
+    </div>
 
-    <!-- This is where you go to search for a city -->
-    <section id="currentSearch">
-        <h2>Search for a City:</h2>
-        <input type="text" id="searchCity" name="Search">
-        <input type="button" value="Search">
-    </section>
+    <article class="col-sm-9">
+      <div class="card">
+        <div class="card-body">
+          <div id="weatherDisplay"></div>
+          <h2 class="card-title text-center">Showing Weather for: <span id="citySearch"></span></h2>
+          <h3>
+            <p id="currentForecast" class=" card-body text-center mt-3"></p>
+          </h3>
+          <p id="display-forecast"></p>
+        </div>
+      </div>
+    </article>
+  </section>
 
-    <!-- List of cities that have been searched for -->
-    <section id="priorSearch">
-        <h2>Previous Searches:</h2>
-    </section>
+  <section class="container-fluid d-flex justify-content-between">
+    <div class="col-sm-3 mt-2">
+      <div class="card">
+        <h2 class="card-title text-center"> Saved Searches:</h2>
+        <article id="saveCity" class="card-body">
+        </article>
+      </div>
+    </div>
 
-    <!-- Displays current weather of city searched -->
-    <section id="weatherDisplay">
-        <h2>Showing Weather For:<span></span></h2>
-    </section>
+    <article class="col-sm-9">
+      <div class="card mt-2">
+        <h2 class="card-title text-center">Five Day Forecast: <span id="futureForecast"></span></h2>
+        <div class="card-body row justify-content-between">
+          <div id="date1" class="col-sm-2 text-center content"></div>
+          <div id="date2" class="col-sm-2 text-center content"></div>
+          <div id="date3" class="col-sm-2 text-center content"></div>
+          <div id="date4" class="col-sm-2 text-center content"></div>
+          <div id="date5" class="col-sm-2 text-center content"></div>
+        </div>
+        <div class="card-body row justify-content-between">
+          <p id="day1" class="col-sm-2 text-center"></p>
+          <p id="day2" class="col-sm-2 text-center"></p>
+          <p id="day3" class="col-sm-2 text-center"></p>
+          <p id="day4" class="col-sm-2 text-center"></p>
+          <p id="day5" class="col-sm-2 text-center"></p>
+        </div>
+      </div>
+    </article>
+  </section>
 
-    <!-- The 5 day forecast will display here -->
-    <section id="futureForecast">
-        <h2>5-Day Forecast:</h2>
-        
-        <div id="date1"></div>
-        <div id="date2"></div>
-        <div id="date3"></div>
-        <div id="date4"></div>
-        <div id="date5"></div>
-
-        <p id="day1"></p>
-        <p id="day2"></p>
-        <p id="day3"></p>
-        <p id="day4"></p>
-        <p id="day5"></p>
-    </section>
+</main>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+<footer id="footer">
+  <p id="footer-copy" class="text-center mt-5 "> &copy; Copyright 2021, NKepers. All Rights Reserved </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>
