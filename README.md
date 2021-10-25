@@ -18,7 +18,7 @@ Javascript
 
 ## Usage
 What your site will look like on your device
-![alt text]()
+![alt text](./screenshot.png)
 
 ## Credits
 
